@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col mt-5 mb-5">
+      <div class="col-md-8 mx-auto">
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2>Cars List</h2>
+  <button class="btn btn-success"  (click)="Openform()">
+    <i class="fas fa-plus"></i> Add a New Car
+  </button>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Model Name</th>
+        <th scope="col">Serial Number</th>
+        <th scope="col" style="text-align: center;">Edit</th>
+        <th scope="col" style="text-align: center;">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <th scope="row">{{car.id}}</th>
+        <td>{{car.name}}</td>
+        <td>{{car.num}}</td>
+        <td style="text-align: center;">
+          <button type="button" class="btn btn-link p-0" (click)="OpenEdit(car)">
+            <i class="fas fa-edit text-primary"></i>
+          </button>
+        </td>        
+        <td style="text-align: center;">
+          <button type="button" class="btn btn-link p-0" (click)="deleteData(car.id)">
+            <i class="fas fa-trash-alt text-danger"></i>
+          </button>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="showSuccessAlert" class="alert alert-success mt-3" role="alert">
+    {{ successMessage }}
+  </div>
+  
+</div>
+</div>
+</div>
+</div>
+
+  

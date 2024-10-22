@@ -1,0 +1,63 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+    background: #ffffff; 
+    color: #007bff;
+    padding: 6rem 0; /* Increased padding for better spacing */
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Dark overlay for better text contrast */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px; /* Increased width for better content area */
+    margin: 0 auto;
+    padding: 2rem; /* Added padding for better spacing */
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Increased font size for emphasis */
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif; /* Modern font family */
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem; /* Slightly larger font size */
+    margin-bottom: 2rem;
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+.cta-button {
+    background: #007bff; /* Eye-catching color */
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded button */
+    font-weight: bold;
+    font-size: 1.125rem; /* Larger font size for the button */
+}
+
+.cta-button:hover {
+    background: #56a0bd; /* Slightly darker shade on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}

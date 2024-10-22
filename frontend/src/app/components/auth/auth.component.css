@@ -1,0 +1,76 @@
+/* Reset basic styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light background */
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .login-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #007bff;
+  }
+  
+  .mb-3 {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333; /* Darker label color */
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+  }
+  
+  .form-text {
+    font-size: 0.85em;
+    color: #6c757d;
+  }
+  
+  .form-footer {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+  }
+  h1 {
+    margin-bottom: 30px; /* Space between the welcome message and the form */
+    color: #007bff; /* Bootstrap primary blue */
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold;
+    text-align: center;
+}
+  

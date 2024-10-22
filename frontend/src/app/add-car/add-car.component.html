@@ -1,0 +1,41 @@
+<form (ngSubmit)="insertData()" #vehicleForm="ngForm">
+  <h2 class="text-center mb-4">Vehicle Form</h2>
+  <div class="mb-3">
+    <label for="name" class="form-label">Model Name</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="name" 
+      [(ngModel)]="name" 
+      name="name" 
+      placeholder="Enter model name" 
+      required
+    >
+    <div *ngIf="vehicleForm.submitted && !name" class="text-danger">
+      Model Name is required
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="num" class="form-label">Serial Number</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="num" 
+      [(ngModel)]="num" 
+      name="num" 
+      placeholder="Enter serial number" 
+      required
+    >
+    <div *ngIf="vehicleForm.submitted && !num" class="text-danger">
+      Serial Number is required
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    <button type="submit" class="btn btn-primary">{{data ? 'update': 'Save'}}</button>
+  </div>
+</form>
+
+<div *ngIf="showSuccessAlert" class="alert alert-success mt-3" role="alert">
+  {{ successMessage }}
+</div>
